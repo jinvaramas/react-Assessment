@@ -75,7 +75,32 @@ export default function HomePage() {
         </button>
       </div>
 
-      
+      {activeTab === null && <div style={{
+        margin: '0 auto 36px auto',
+        maxWidth: '560px',
+        backgroundColor: 'rgba(255, 255, 255, 0.55)',
+        backdropFilter: 'blur(10px)',
+        borderRadius: '16px',
+        border: '1.5px solid rgba(168, 207, 232, 0.7)',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+        padding: '28px 36px',
+        textAlign: 'center',
+      }}>
+        <p style={{ fontSize: '1.25rem', fontWeight: '700', color: '#1a237e', margin: '0 0 6px 0' }}>
+          🐱 Welcome, Human Servant.
+        </p>
+        <p style={{ fontSize: '1.1rem', fontWeight: '600', color: '#1565c0', margin: '0 0 10px 0' }}>
+          Welcome to the Cat Dimension.
+        </p>
+        <p style={{ fontSize: '0.95rem', fontWeight: '500', color: '#ec407a', margin: '0 0 14px 0', letterSpacing: '0.02em' }}>
+          Certified Meow Zone. Cats in Control Now.
+        </p>
+        <p style={{ fontSize: '0.85rem', fontWeight: '500', color: '#546e7a', margin: '0', fontStyle: 'italic' }}>
+          — Meow Meow Corporation 🐾
+        </p>
+      </div>}
+
+
       {activeTab === 'admin' && (
         <MemberForm members={members} setMembers={setMembers} />
       )}
